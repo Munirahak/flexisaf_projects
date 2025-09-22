@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Array Methods</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      button {
+        margin: 5px;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #4caf50;
+        color: white;
+      }
+      button:hover {
+        background: #45a049;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+      }
+      li {
+        background: #f4f4f4;
+        margin: 5px 0;
+        padding: 8px;
+        border-radius: 4px;
+      }
+      section {
+        margin-bottom: 20px;
+      }
+      .result-box {
+        padding: 10px;
+        background: #e8f5e9;
+        border: 1px solid #c8e6c9;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Interactive Array Methods Demo</h1>
+
+    <section>
+      <h2>Original Fruits</h2>
+      <ul id="original"></ul>
+    </section>
+
+    <section>
+      <h2>Try Array Methods</h2>
+      <button onclick="showMap()">map()</button>
+      <button onclick="showFilter()">filter()</button>
+      <button onclick="showReduce()">reduce()</button>
+      <button onclick="showForEach()">forEach()</button>
+
+      <div id="output" class="result-box">
+        Click a button to see results here.
+      </div>
+    </section>
+    <script src="array.js"></script>
+  </body>
+</html>
