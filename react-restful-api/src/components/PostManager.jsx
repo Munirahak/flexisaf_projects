@@ -7,7 +7,7 @@ function PostManager() {
   const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
 
-  // ✅ GET - Fetch posts from the API
+  // GET: Fetch posts from the API
   useEffect(() => {
     fetch(API_URL + "?_limit=5")
       .then((res) => res.json())
@@ -15,7 +15,7 @@ function PostManager() {
       .catch((err) => console.error("Error fetching posts:", err));
   }, []);
 
-  // ✅ POST - Add a new post
+  // POST: Add a new post
   const handleAddPost = () => {
     if (!newTitle || !newBody) return alert("Please fill in both fields!");
 
@@ -39,7 +39,7 @@ function PostManager() {
       .catch((err) => console.error("Error adding post:", err));
   };
 
-  // ✅ PUT - Edit a post
+  // PUT: Edit a post
   const handleEditPost = (id) => {
     const updatedPost = { title: "Updated Title", body: "Updated Body" };
 
@@ -55,7 +55,7 @@ function PostManager() {
       .catch((err) => console.error("Error updating post:", err));
   };
 
-  // ✅ DELETE - Remove a post
+  // DELETE: Remove a post
   const handleDeletePost = (id) => {
     fetch(`${API_URL}/${id}`, { method: "DELETE" })
       .then(() => setPosts(posts.filter((post) => post.id !== id)))
